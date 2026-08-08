@@ -4,28 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Khalidou Kane | Tissus & Élégance</title>
+<title>Khalidou Kane — Tissus & Élégance</title>
 
-<meta name="description" content="Khalidou Kane — Tissus, Bazin, Getzner, Thioup Mali, Wax et Voile. De la lumière dans votre style.">
+<meta name="description" content="Khalidou Kane — Bazin, Getzner, Thioup Mali, Wax et Voile. De la lumière dans votre style.">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root{
-    --black:#090909;
-    --black2:#111111;
-    --white:#ffffff;
-    --gold:#d4af37;
-    --gold2:#f4d77b;
-    --gray:#a8a8a8;
+    --black:#070707;
+    --black2:#101010;
     --card:#151515;
+    --white:#fff;
+    --gold:#d4af37;
+    --gold-light:#f5dc82;
+    --gray:#aaa;
     --border:rgba(212,175,55,.25);
 }
 
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 html{
@@ -33,19 +33,23 @@ html{
 }
 
 body{
-    font-family:'Poppins',sans-serif;
     background:var(--black);
     color:var(--white);
+    font-family:'Poppins',sans-serif;
     overflow-x:hidden;
 }
 
 a{
-    color:inherit;
     text-decoration:none;
+    color:inherit;
 }
 
 button{
     font-family:inherit;
+}
+
+img{
+    max-width:100%;
 }
 
 /* =========================
@@ -58,49 +62,60 @@ header{
     left:0;
     width:100%;
     height:82px;
-    z-index:1000;
+    padding:0 6%;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:0 7%;
-    background:rgba(9,9,9,.88);
-    backdrop-filter:blur(18px);
+    z-index:1000;
+    background:rgba(7,7,7,.88);
+    backdrop-filter:blur(20px);
     border-bottom:1px solid rgba(212,175,55,.12);
 }
 
 .logo{
     display:flex;
     align-items:center;
-    gap:12px;
-    font-family:'Playfair Display',serif;
-    font-size:22px;
-    letter-spacing:3px;
-    font-weight:600;
+    gap:13px;
 }
 
 .logo-mark{
-    width:42px;
-    height:42px;
-    border:1px solid var(--gold);
+    width:48px;
+    height:48px;
     border-radius:50%;
+    overflow:hidden;
+    border:1px solid var(--gold);
+    background:#fff;
     display:flex;
     align-items:center;
     justify-content:center;
-    color:var(--gold);
-    font-size:16px;
+    flex-shrink:0;
+}
+
+.logo-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.logo-text{
+    font-family:'Playfair Display',serif;
+    font-size:20px;
+    letter-spacing:2.5px;
+    font-weight:600;
 }
 
 nav{
     display:flex;
     align-items:center;
-    gap:32px;
+    gap:30px;
 }
 
 nav a{
-    font-size:13px;
+    color:#ddd;
+    font-size:12px;
     text-transform:uppercase;
     letter-spacing:1.5px;
-    color:#ddd;
     transition:.3s;
 }
 
@@ -111,47 +126,44 @@ nav a:hover{
 .header-actions{
     display:flex;
     align-items:center;
-    gap:14px;
+    gap:10px;
+}
+
+.cart-btn,
+.menu-btn{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    border:1px solid var(--border);
+    background:transparent;
+    color:#fff;
+    cursor:pointer;
 }
 
 .cart-btn{
     position:relative;
-    width:43px;
-    height:43px;
-    border:1px solid var(--border);
-    background:transparent;
-    color:white;
-    border-radius:50%;
-    cursor:pointer;
-    font-size:18px;
+    font-size:17px;
 }
 
 .cart-count{
     position:absolute;
     top:-5px;
-    right:-5px;
+    right:-4px;
     width:18px;
     height:18px;
     background:var(--gold);
     color:#000;
     border-radius:50%;
     font-size:10px;
+    font-weight:700;
     display:flex;
-    align-items:center;
     justify-content:center;
-    font-weight:bold;
+    align-items:center;
 }
 
 .menu-btn{
     display:none;
-    width:43px;
-    height:43px;
-    border:1px solid var(--border);
-    background:transparent;
-    color:white;
-    border-radius:50%;
     font-size:20px;
-    cursor:pointer;
 }
 
 /* =========================
@@ -160,48 +172,48 @@ nav a:hover{
 
 .hero{
     min-height:100vh;
+    padding:150px 6% 90px;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:150px 20px 90px;
     position:relative;
     overflow:hidden;
     background:
-        radial-gradient(circle at 50% 35%,rgba(212,175,55,.13),transparent 30%),
-        radial-gradient(circle at 10% 90%,rgba(255,255,255,.05),transparent 30%),
-        #090909;
+        radial-gradient(circle at 50% 40%,rgba(212,175,55,.15),transparent 30%),
+        radial-gradient(circle at 10% 90%,rgba(255,255,255,.05),transparent 25%),
+        #070707;
 }
 
 .hero::before{
     content:"";
     position:absolute;
-    width:600px;
-    height:600px;
-    border:1px solid rgba(212,175,55,.08);
+    width:650px;
+    height:650px;
+    border:1px solid rgba(212,175,55,.07);
     border-radius:50%;
 }
 
 .hero-content{
+    max-width:900px;
     position:relative;
     z-index:2;
-    max-width:900px;
 }
 
 .eyebrow{
     color:var(--gold);
-    text-transform:uppercase;
+    font-size:11px;
     letter-spacing:5px;
-    font-size:12px;
-    margin-bottom:25px;
+    text-transform:uppercase;
+    margin-bottom:22px;
 }
 
 .hero h1{
     font-family:'Playfair Display',serif;
-    font-size:clamp(52px,9vw,105px);
+    font-size:clamp(55px,9vw,105px);
     line-height:.95;
-    letter-spacing:5px;
-    margin-bottom:25px;
+    letter-spacing:4px;
+    margin-bottom:28px;
 }
 
 .hero h1 span{
@@ -210,10 +222,10 @@ nav a:hover{
 
 .hero p{
     max-width:650px;
-    margin:0 auto 35px;
-    color:#bcbcbc;
-    font-size:16px;
-    line-height:1.8;
+    margin:auto;
+    color:#aaa;
+    line-height:1.9;
+    font-size:15px;
 }
 
 .hero-buttons{
@@ -221,46 +233,50 @@ nav a:hover{
     justify-content:center;
     gap:14px;
     flex-wrap:wrap;
+    margin-top:35px;
 }
 
 .btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
     padding:15px 28px;
     border-radius:50px;
-    font-size:12px;
-    letter-spacing:1.5px;
     text-transform:uppercase;
+    letter-spacing:1.3px;
+    font-size:11px;
     font-weight:600;
     cursor:pointer;
     transition:.3s;
-    border:1px solid var(--gold);
 }
 
 .btn-gold{
-    background:linear-gradient(135deg,var(--gold),var(--gold2));
     color:#080808;
+    background:linear-gradient(135deg,var(--gold),var(--gold-light));
 }
 
 .btn-gold:hover{
     transform:translateY(-3px);
-    box-shadow:0 12px 30px rgba(212,175,55,.2);
+    box-shadow:0 15px 35px rgba(212,175,55,.2);
 }
 
 .btn-outline{
+    color:#fff;
+    border:1px solid var(--gold);
     background:transparent;
-    color:white;
 }
 
 .btn-outline:hover{
-    background:var(--white);
+    background:#fff;
     color:#000;
 }
 
 /* =========================
-   SECTION
+   GENERAL
 ========================= */
 
 section{
-    padding:100px 7%;
+    padding:100px 6%;
 }
 
 .section-title{
@@ -272,63 +288,66 @@ section{
     color:var(--gold);
     text-transform:uppercase;
     letter-spacing:4px;
-    font-size:11px;
+    font-size:10px;
 }
 
 .section-title h2{
     font-family:'Playfair Display',serif;
-    font-size:clamp(35px,5vw,58px);
-    margin-top:12px;
+    font-size:clamp(38px,5vw,60px);
+    margin-top:10px;
 }
 
 .section-title p{
-    color:var(--gray);
     max-width:600px;
     margin:15px auto 0;
-    line-height:1.7;
+    color:#888;
+    font-size:13px;
+    line-height:1.8;
 }
 
 /* =========================
-   CATEGORIES
+   COLLECTIONS
 ========================= */
 
-.categories{
+.collections{
     background:#0d0d0d;
 }
 
 .category-grid{
+    max-width:1200px;
+    margin:auto;
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
 .category{
-    min-height:210px;
-    border:1px solid rgba(255,255,255,.08);
-    background:
-        linear-gradient(145deg,rgba(212,175,55,.09),transparent),
-        #121212;
-    padding:35px;
+    min-height:230px;
+    padding:32px;
     display:flex;
     flex-direction:column;
     justify-content:flex-end;
-    transition:.4s;
+    border:1px solid rgba(255,255,255,.08);
+    background:
+        linear-gradient(145deg,rgba(212,175,55,.10),transparent 60%),
+        #121212;
     position:relative;
     overflow:hidden;
-}
-
-.category::after{
-    content:"✦";
-    position:absolute;
-    top:25px;
-    right:30px;
-    color:var(--gold);
-    font-size:20px;
+    transition:.4s;
 }
 
 .category:hover{
     transform:translateY(-7px);
     border-color:var(--border);
+}
+
+.category::before{
+    content:"✦";
+    position:absolute;
+    top:25px;
+    right:28px;
+    color:var(--gold);
+    font-size:22px;
 }
 
 .category h3{
@@ -337,9 +356,9 @@ section{
 }
 
 .category p{
-    color:var(--gray);
-    font-size:12px;
     margin-top:7px;
+    color:#888;
+    font-size:11px;
 }
 
 /* =========================
@@ -347,13 +366,15 @@ section{
 ========================= */
 
 .products{
-    background:#090909;
+    background:#070707;
 }
 
 .product-grid{
+    max-width:1200px;
+    margin:auto;
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:25px;
+    gap:24px;
 }
 
 .product{
@@ -369,21 +390,17 @@ section{
 }
 
 .product-image{
-    height:340px;
+    height:350px;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     background:
-        linear-gradient(145deg,#191919,#0d0d0d);
+        radial-gradient(circle,rgba(212,175,55,.08),transparent 45%),
+        #111;
     color:#555;
-    font-size:12px;
+    font-size:11px;
     letter-spacing:2px;
-}
-
-.product-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+    text-align:center;
 }
 
 .product-info{
@@ -396,35 +413,37 @@ section{
 }
 
 .product-info p{
-    color:var(--gray);
-    font-size:12px;
-    margin:7px 0 15px;
+    color:#777;
+    font-size:11px;
+    margin:7px 0 17px;
 }
 
 .product-bottom{
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
+    gap:10px;
 }
 
 .price{
     color:var(--gold);
-    font-size:18px;
+    font-size:15px;
     font-weight:600;
 }
 
-.buy{
+.buy-btn{
     border:1px solid var(--gold);
     background:transparent;
-    color:white;
-    padding:9px 15px;
+    color:#fff;
+    padding:9px 14px;
     border-radius:30px;
     cursor:pointer;
-    font-size:11px;
+    font-size:10px;
     text-transform:uppercase;
+    transition:.3s;
 }
 
-.buy:hover{
+.buy-btn:hover{
     background:var(--gold);
     color:#000;
 }
@@ -435,7 +454,7 @@ section{
 
 .about{
     background:
-        radial-gradient(circle at 80% 50%,rgba(212,175,55,.1),transparent 30%),
+        radial-gradient(circle at 80% 50%,rgba(212,175,55,.08),transparent 30%),
         #101010;
 }
 
@@ -449,8 +468,8 @@ section{
 }
 
 .about-box{
-    border:1px solid var(--border);
     padding:50px;
+    border:1px solid var(--border);
     background:rgba(255,255,255,.02);
 }
 
@@ -461,73 +480,74 @@ section{
 }
 
 .about-box p{
-    color:#aaa;
+    color:#999;
     line-height:1.9;
+    font-size:13px;
 }
 
 .features{
     display:grid;
-    gap:22px;
+    gap:25px;
 }
 
 .feature{
     display:flex;
-    gap:18px;
-    align-items:flex-start;
+    gap:17px;
 }
 
 .feature-icon{
     color:var(--gold);
-    font-size:22px;
+    font-size:20px;
 }
 
 .feature h3{
-    font-size:15px;
+    font-size:14px;
     margin-bottom:5px;
 }
 
 .feature p{
-    color:#888;
-    font-size:12px;
-    line-height:1.6;
+    color:#777;
+    font-size:11px;
+    line-height:1.7;
 }
 
 /* =========================
-   DELIVERY
+   SERVICES
 ========================= */
 
-.delivery{
+.services{
     text-align:center;
 }
 
-.delivery-grid{
-    max-width:900px;
+.services-grid{
+    max-width:950px;
     margin:auto;
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:20px;
 }
 
-.delivery-card{
+.service{
     padding:30px 20px;
     border:1px solid rgba(255,255,255,.08);
     background:#111;
 }
 
-.delivery-card span{
-    display:block;
+.service-icon{
     font-size:28px;
     margin-bottom:12px;
 }
 
-.delivery-card h3{
+.service h3{
     font-family:'Playfair Display',serif;
-    margin-bottom:8px;
+    font-size:20px;
+    margin-bottom:7px;
 }
 
-.delivery-card p{
-    color:#888;
-    font-size:12px;
+.service p{
+    color:#777;
+    font-size:11px;
+    line-height:1.7;
 }
 
 /* =========================
@@ -539,10 +559,10 @@ section{
 }
 
 .contact-box{
-    max-width:900px;
+    max-width:950px;
     margin:auto;
     text-align:center;
-    padding:70px 30px;
+    padding:75px 30px;
     border:1px solid var(--border);
     background:
         radial-gradient(circle at center,rgba(212,175,55,.08),transparent 55%),
@@ -551,25 +571,27 @@ section{
 
 .contact-box h2{
     font-family:'Playfair Display',serif;
-    font-size:48px;
+    font-size:clamp(38px,6vw,60px);
 }
 
 .contact-box p{
-    color:#aaa;
+    max-width:600px;
     margin:15px auto 30px;
-    max-width:550px;
+    color:#888;
+    line-height:1.8;
+    font-size:13px;
 }
 
 .whatsapp{
     display:inline-flex;
     align-items:center;
     gap:10px;
+    padding:15px 26px;
     background:#25D366;
-    color:white;
-    padding:15px 25px;
-    border-radius:40px;
+    border-radius:50px;
+    color:#fff;
+    font-size:12px;
     font-weight:600;
-    font-size:13px;
 }
 
 /* =========================
@@ -577,22 +599,28 @@ section{
 ========================= */
 
 footer{
-    padding:45px 7%;
-    border-top:1px solid rgba(255,255,255,.08);
     text-align:center;
-    background:#070707;
+    padding:50px 6%;
+    background:#050505;
+    border-top:1px solid rgba(255,255,255,.07);
 }
 
-.footer-logo{
+.footer-brand{
     font-family:'Playfair Display',serif;
     font-size:25px;
     letter-spacing:3px;
 }
 
-footer p{
-    color:#666;
+.footer-slogan{
+    margin-top:10px;
+    color:var(--gold);
     font-size:11px;
+}
+
+.footer-copy{
     margin-top:12px;
+    color:#555;
+    font-size:10px;
 }
 
 /* =========================
@@ -602,15 +630,15 @@ footer p{
 .cart-panel{
     position:fixed;
     top:0;
-    right:-420px;
-    width:min(400px,100%);
+    right:-430px;
+    width:min(410px,100%);
     height:100vh;
-    background:#111;
-    z-index:2000;
+    z-index:3000;
+    background:#101010;
     border-left:1px solid var(--border);
     padding:30px;
     transition:.4s;
-    box-shadow:-20px 0 50px rgba(0,0,0,.5);
+    box-shadow:-20px 0 50px rgba(0,0,0,.6);
 }
 
 .cart-panel.open{
@@ -619,8 +647,8 @@ footer p{
 
 .cart-head{
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
     padding-bottom:20px;
     border-bottom:1px solid rgba(255,255,255,.1);
 }
@@ -630,39 +658,48 @@ footer p{
 }
 
 .close-cart{
-    background:none;
     border:0;
-    color:white;
-    font-size:25px;
+    background:none;
+    color:#fff;
+    font-size:28px;
     cursor:pointer;
 }
 
 .cart-items{
-    margin-top:25px;
+    margin-top:20px;
 }
 
 .cart-item{
     display:flex;
     justify-content:space-between;
-    gap:10px;
+    align-items:center;
     padding:15px 0;
     border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .cart-item small{
-    color:#888;
+    color:#777;
+}
+
+.remove{
+    border:0;
+    background:none;
+    color:#777;
+    font-size:20px;
+    cursor:pointer;
 }
 
 .cart-total{
-    margin-top:25px;
     display:flex;
     justify-content:space-between;
-    font-size:18px;
+    margin-top:25px;
+    font-size:17px;
 }
 
 .checkout{
     width:100%;
     margin-top:20px;
+    border:0;
 }
 
 /* =========================
@@ -680,7 +717,7 @@ footer p{
         top:82px;
         left:0;
         width:100%;
-        background:#0b0b0b;
+        background:#090909;
         flex-direction:column;
         padding:30px;
         gap:25px;
@@ -717,22 +754,22 @@ footer p{
         top:72px;
     }
 
-    .logo{
-        font-size:17px;
-        letter-spacing:2px;
+    .logo-text{
+        font-size:15px;
+        letter-spacing:1.5px;
     }
 
     .logo-mark{
-        width:35px;
-        height:35px;
+        width:40px;
+        height:40px;
     }
 
     .hero{
-        padding-top:130px;
+        padding-top:125px;
     }
 
     .hero h1{
-        font-size:55px;
+        font-size:54px;
     }
 
     section{
@@ -741,20 +778,24 @@ footer p{
 
     .category-grid,
     .product-grid,
-    .delivery-grid{
+    .services-grid{
         grid-template-columns:1fr;
     }
 
     .product-image{
-        height:390px;
+        height:400px;
     }
 
     .about-box{
         padding:30px;
     }
 
-    .contact-box h2{
+    .about-box h2{
         font-size:38px;
+    }
+
+    .contact-box{
+        padding:55px 20px;
     }
 }
 </style>
@@ -762,38 +803,75 @@ footer p{
 
 <body>
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
     <a href="#accueil" class="logo">
-        <span class="logo-mark">KK</span>
-        <span>KHALIDOU KANE</span>
+
+        <span class="logo-mark">
+            <img
+                src="IMG_3081.jpeg"
+                alt="Logo Khalidou Kane"
+                class="logo-image"
+            >
+        </span>
+
+        <span class="logo-text">
+            KHALIDOU KANE
+        </span>
+
     </a>
 
+
     <nav id="nav">
+
         <a href="#accueil">Accueil</a>
         <a href="#collections">Collections</a>
         <a href="#produits">Produits</a>
         <a href="#maison">La Maison</a>
         <a href="#contact">Contact</a>
+
     </nav>
+
 
     <div class="header-actions">
 
-        <button class="cart-btn" onclick="toggleCart()">
+        <button
+            class="cart-btn"
+            onclick="toggleCart()"
+            aria-label="Panier">
+
             🛒
-            <span class="cart-count" id="cartCount">0</span>
+
+            <span
+                class="cart-count"
+                id="cartCount">
+                0
+            </span>
+
         </button>
 
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <button
+            class="menu-btn"
+            onclick="toggleMenu()"
+            aria-label="Menu">
+
+            ☰
+
+        </button>
 
     </div>
 
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <main id="accueil">
 
@@ -801,7 +879,9 @@ footer p{
 
     <div class="hero-content">
 
-        <div class="eyebrow">Maison Khalidou Kane</div>
+        <div class="eyebrow">
+            Maison Khalidou Kane
+        </div>
 
         <h1>
             De la lumière<br>
@@ -809,20 +889,29 @@ footer p{
         </h1>
 
         <p>
-            Découvrez une sélection élégante de tissus,
-            Bazin, Getzner, Thioup Mali, Wax et Voile,
-            pensée pour celles et ceux qui veulent porter
-            leur style avec distinction.
+            Découvrez notre univers de tissus d'exception :
+            Bazin, Getzner, Thioup Mali, Wax et Voile.
+            Des matières choisies pour donner caractère,
+            élégance et lumière à votre style.
         </p>
 
         <div class="hero-buttons">
 
-            <a href="#produits" class="btn btn-gold">
+            <a
+                href="#produits"
+                class="btn btn-gold">
+
                 Découvrir la collection
+
             </a>
 
-            <a href="#contact" class="btn btn-outline">
-                Nous contacter
+            <a
+                href="https://wa.me/221781383200"
+                target="_blank"
+                class="btn btn-outline">
+
+                WhatsApp
+
             </a>
 
         </div>
@@ -832,53 +921,74 @@ footer p{
 </section>
 
 
-<!-- COLLECTIONS -->
+<!-- =========================
+     COLLECTIONS
+========================= -->
 
-<section class="categories" id="collections">
+<section
+    class="collections"
+    id="collections">
 
     <div class="section-title">
 
-        <small>Notre univers</small>
+        <small>
+            Notre univers
+        </small>
 
-        <h2>Collections d'exception</h2>
+        <h2>
+            Collections d'exception
+        </h2>
 
         <p>
-            Des matières sélectionnées avec soin
-            pour sublimer vos créations.
+            Des matières raffinées pour vos plus
+            belles créations.
         </p>
 
     </div>
+
 
     <div class="category-grid">
 
         <div class="category">
             <h3>Bazin</h3>
-            <p>Élégance traditionnelle & moderne</p>
+            <p>
+                Élégance traditionnelle et moderne
+            </p>
         </div>
 
         <div class="category">
             <h3>Getzner</h3>
-            <p>La signature des grandes occasions</p>
+            <p>
+                La signature des grandes occasions
+            </p>
         </div>
 
         <div class="category">
             <h3>Thioup Mali</h3>
-            <p>Un style authentique et raffiné</p>
+            <p>
+                Authenticité et raffinement
+            </p>
         </div>
 
         <div class="category">
             <h3>Wax</h3>
-            <p>Couleurs, caractère & créativité</p>
+            <p>
+                Couleurs et caractère
+            </p>
         </div>
 
         <div class="category">
             <h3>Voile</h3>
-            <p>Légèreté et sophistication</p>
+            <p>
+                Légèreté et sophistication
+            </p>
         </div>
 
         <div class="category">
             <h3>Premium</h3>
-            <p>Nos sélections les plus exclusives</p>
+            <p>
+                Nos sélections les plus exclusives
+            </p>
         </div>
 
     </div>
@@ -886,25 +996,35 @@ footer p{
 </section>
 
 
-<!-- PRODUITS -->
+<!-- =========================
+     PRODUITS
+========================= -->
 
-<section class="products" id="produits">
+<section
+    class="products"
+    id="produits">
 
     <div class="section-title">
 
-        <small>Sélection</small>
+        <small>
+            Sélection Khalidou Kane
+        </small>
 
-        <h2>Nos pièces</h2>
+        <h2>
+            Nos produits
+        </h2>
 
         <p>
-            Les photos de vos véritables produits
-            pourront être ajoutées ici ensuite.
+            Les véritables photos des tissus seront
+            ajoutées ici dans la prochaine étape.
         </p>
 
     </div>
 
+
     <div class="product-grid">
 
+
         <article class="product">
 
             <div class="product-image">
@@ -913,17 +1033,26 @@ footer p{
 
             <div class="product-info">
 
-                <h3>Bazin Royal</h3>
+                <h3>
+                    Bazin Royal
+                </h3>
 
-                <p>Collection Premium</p>
+                <p>
+                    Collection Premium
+                </p>
 
                 <div class="product-bottom">
 
-                    <span class="price">Prix sur demande</span>
+                    <span class="price">
+                        Prix sur demande
+                    </span>
 
-                    <button class="buy"
+                    <button
+                        class="buy-btn"
                         onclick="addToCart('Bazin Royal')">
+
                         Ajouter
+
                     </button>
 
                 </div>
@@ -941,17 +1070,26 @@ footer p{
 
             <div class="product-info">
 
-                <h3>Getzner Prestige</h3>
+                <h3>
+                    Getzner Prestige
+                </h3>
 
-                <p>Sélection Luxe</p>
+                <p>
+                    Collection Luxe
+                </p>
 
                 <div class="product-bottom">
 
-                    <span class="price">Prix sur demande</span>
+                    <span class="price">
+                        Prix sur demande
+                    </span>
 
-                    <button class="buy"
+                    <button
+                        class="buy-btn"
                         onclick="addToCart('Getzner Prestige')">
+
                         Ajouter
+
                     </button>
 
                 </div>
@@ -969,45 +1107,26 @@ footer p{
 
             <div class="product-info">
 
-                <h3>Wax Signature</h3>
+                <h3>
+                    Thioup Mali
+                </h3>
 
-                <p>Collection Color</p>
-
-                <div class="product-bottom">
-
-                    <span class="price">Prix sur demande</span>
-
-                    <button class="buy"
-                        onclick="addToCart('Wax Signature')">
-                        Ajouter
-                    </button>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <article class="product">
-
-            <div class="product-image">
-                PHOTO PRODUIT À VENIR
-            </div>
-
-            <div class="product-info">
-
-                <h3>Thioup Mali</h3>
-
-                <p>Tradition & élégance</p>
+                <p>
+                    Tradition & élégance
+                </p>
 
                 <div class="product-bottom">
 
-                    <span class="price">Prix sur demande</span>
+                    <span class="price">
+                        Prix sur demande
+                    </span>
 
-                    <button class="buy"
+                    <button
+                        class="buy-btn"
                         onclick="addToCart('Thioup Mali')">
+
                         Ajouter
+
                     </button>
 
                 </div>
@@ -1025,17 +1144,63 @@ footer p{
 
             <div class="product-info">
 
-                <h3>Voile Élégance</h3>
+                <h3>
+                    Wax Signature
+                </h3>
 
-                <p>Collection légère</p>
+                <p>
+                    Collection Color
+                </p>
 
                 <div class="product-bottom">
 
-                    <span class="price">Prix sur demande</span>
+                    <span class="price">
+                        Prix sur demande
+                    </span>
 
-                    <button class="buy"
+                    <button
+                        class="buy-btn"
+                        onclick="addToCart('Wax Signature')">
+
+                        Ajouter
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product">
+
+            <div class="product-image">
+                PHOTO PRODUIT À VENIR
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Voile Élégance
+                </h3>
+
+                <p>
+                    Collection légère
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Prix sur demande
+                    </span>
+
+                    <button
+                        class="buy-btn"
                         onclick="addToCart('Voile Élégance')">
+
                         Ajouter
+
                     </button>
 
                 </div>
@@ -1053,17 +1218,26 @@ footer p{
 
             <div class="product-info">
 
-                <h3>Sélection Royale</h3>
+                <h3>
+                    Sélection Royale
+                </h3>
 
-                <p>Édition exclusive</p>
+                <p>
+                    Édition exclusive
+                </p>
 
                 <div class="product-bottom">
 
-                    <span class="price">Prix sur demande</span>
+                    <span class="price">
+                        Prix sur demande
+                    </span>
 
-                    <button class="buy"
+                    <button
+                        class="buy-btn"
                         onclick="addToCart('Sélection Royale')">
+
                         Ajouter
+
                     </button>
 
                 </div>
@@ -1071,28 +1245,40 @@ footer p{
             </div>
 
         </article>
+
 
     </div>
 
 </section>
 
 
-<!-- LA MAISON -->
+<!-- =========================
+     LA MAISON
+========================= -->
 
-<section class="about" id="maison">
+<section
+    class="about"
+    id="maison">
 
     <div class="about-grid">
 
+
         <div class="about-box">
 
-            <h2>Khalidou Kane</h2>
+            <div class="eyebrow">
+                Notre histoire
+            </div>
+
+            <h2>
+                Khalidou Kane
+            </h2>
 
             <p>
                 Une maison dédiée à l'élégance,
                 au savoir-faire et à la beauté des tissus.
-                Notre objectif est simple :
-                vous proposer des matières qui donnent
-                du caractère à chaque tenue.
+                Nous sélectionnons des matières capables
+                de transformer chaque tenue en véritable
+                expression du style.
             </p>
 
         </div>
@@ -1100,16 +1286,24 @@ footer p{
 
         <div class="features">
 
+
             <div class="feature">
 
-                <div class="feature-icon">✦</div>
+                <div class="feature-icon">
+                    ✦
+                </div>
 
                 <div>
-                    <h3>Sélection raffinée</h3>
+
+                    <h3>
+                        Sélection raffinée
+                    </h3>
+
                     <p>
                         Des tissus choisis pour leur
                         qualité et leur élégance.
                     </p>
+
                 </div>
 
             </div>
@@ -1117,14 +1311,21 @@ footer p{
 
             <div class="feature">
 
-                <div class="feature-icon">✦</div>
+                <div class="feature-icon">
+                    ✦
+                </div>
 
                 <div>
-                    <h3>Conseils personnalisés</h3>
+
+                    <h3>
+                        Conseils personnalisés
+                    </h3>
+
                     <p>
                         Nous vous accompagnons dans
-                        le choix de votre tissu.
+                        le choix de vos tissus.
                     </p>
+
                 </div>
 
             </div>
@@ -1132,17 +1333,25 @@ footer p{
 
             <div class="feature">
 
-                <div class="feature-icon">✦</div>
+                <div class="feature-icon">
+                    ✦
+                </div>
 
                 <div>
-                    <h3>Style & tradition</h3>
+
+                    <h3>
+                        Tradition & modernité
+                    </h3>
+
                     <p>
-                        Une rencontre entre
-                        héritage et modernité.
+                        Un univers où l'héritage
+                        rencontre les tendances actuelles.
                     </p>
+
                 </div>
 
             </div>
+
 
         </div>
 
@@ -1151,72 +1360,104 @@ footer p{
 </section>
 
 
-<!-- LIVRAISON -->
+<!-- =========================
+     SERVICES
+========================= -->
 
-<section class="delivery">
+<section class="services">
 
     <div class="section-title">
 
-        <small>Service</small>
+        <small>
+            Nos services
+        </small>
 
-        <h2>Simple & élégant</h2>
+        <h2>
+            Une expérience premium
+        </h2>
 
     </div>
 
-    <div class="delivery-grid">
 
-        <div class="delivery-card">
+    <div class="services-grid">
 
-            <span>🚚</span>
 
-            <h3>Livraison</h3>
+        <div class="service">
+
+            <div class="service-icon">
+                🚚
+            </div>
+
+            <h3>
+                Livraison
+            </h3>
 
             <p>
-                Livraison disponible selon votre zone.
+                Livraison disponible selon
+                votre zone.
             </p>
 
         </div>
 
 
-        <div class="delivery-card">
+        <div class="service">
 
-            <span>📍</span>
+            <div class="service-icon">
+                📍
+            </div>
 
-            <h3>Retrait</h3>
+            <h3>
+                Retrait
+            </h3>
 
             <p>
-                Retirez votre commande directement.
+                Retirez votre commande
+                directement.
             </p>
 
         </div>
 
 
-        <div class="delivery-card">
+        <div class="service">
 
-            <span>💬</span>
+            <div class="service-icon">
+                💬
+            </div>
 
-            <h3>Conseil</h3>
+            <h3>
+                Conseil
+            </h3>
 
             <p>
-                Contactez-nous pour choisir votre tissu.
+                Contactez-nous pour choisir
+                votre tissu.
             </p>
 
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================= -->
 
-<section class="contact" id="contact">
+<section
+    class="contact"
+    id="contact">
 
     <div class="contact-box">
 
-        <div class="eyebrow">Khalidou Kane</div>
+        <div class="eyebrow">
+            Maison Khalidou Kane
+        </div>
 
-        <h2>Parlons de votre style.</h2>
+        <h2>
+            Parlons de votre style.
+        </h2>
 
         <p>
             Pour connaître les prix, les disponibilités
@@ -1228,7 +1469,10 @@ footer p{
             class="whatsapp"
             href="https://wa.me/221781383200"
             target="_blank">
-            💬 Commander sur WhatsApp
+
+            💬
+            Commander sur WhatsApp
+
         </a>
 
     </div>
@@ -1238,42 +1482,56 @@ footer p{
 </main>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-    <div class="footer-logo">
+    <div class="footer-brand">
         KHALIDOU KANE
     </div>
 
-    <p>
-        De la lumière dans votre style ✨
-    </p>
+    <div class="footer-slogan">
+        De la lumière dans votre style.
+    </div>
 
-    <p>
+    <div class="footer-copy">
         © 2026 Khalidou Kane — Tous droits réservés.
-    </p>
+    </div>
 
 </footer>
 
 
-<!-- PANIER -->
+<!-- =========================
+     PANIER
+========================= -->
 
-<div class="cart-panel" id="cartPanel">
+<div
+    class="cart-panel"
+    id="cartPanel">
+
 
     <div class="cart-head">
 
-        <h2>Votre panier</h2>
+        <h2>
+            Votre panier
+        </h2>
 
         <button
             class="close-cart"
             onclick="toggleCart()">
+
             ×
+
         </button>
 
     </div>
 
-    <div class="cart-items" id="cartItems">
+
+    <div
+        class="cart-items"
+        id="cartItems">
 
         <p style="color:#777;font-size:13px;">
             Votre panier est vide.
@@ -1281,9 +1539,12 @@ footer p{
 
     </div>
 
+
     <div class="cart-total">
 
-        <span>Total</span>
+        <span>
+            Total
+        </span>
 
         <strong id="cartTotal">
             0 FCFA
@@ -1291,22 +1552,25 @@ footer p{
 
     </div>
 
+
     <a
-        class="btn btn-gold checkout"
         href="https://wa.me/221781383200"
         target="_blank"
-        style="display:block;text-align:center;">
+        class="btn btn-gold checkout">
+
         Commander sur WhatsApp
+
     </a>
+
 
 </div>
 
 
 <script>
 
-let cart = [];
-
-/* MENU MOBILE */
+/* =========================
+   MENU
+========================= */
 
 function toggleMenu(){
 
@@ -1318,7 +1582,28 @@ function toggleMenu(){
 }
 
 
-/* PANIER */
+document
+    .querySelectorAll("nav a")
+    .forEach(function(link){
+
+        link.addEventListener("click",function(){
+
+            document
+                .getElementById("nav")
+                .classList
+                .remove("active");
+
+        });
+
+    });
+
+
+/* =========================
+   PANIER
+========================= */
+
+let cart = [];
+
 
 function toggleCart(){
 
@@ -1329,8 +1614,6 @@ function toggleCart(){
 
 }
 
-
-/* AJOUT PRODUIT */
 
 function addToCart(product){
 
@@ -1348,7 +1631,14 @@ function addToCart(product){
 }
 
 
-/* ACTUALISER PANIER */
+function removeItem(index){
+
+    cart.splice(index,1);
+
+    updateCart();
+
+}
+
 
 function updateCart(){
 
@@ -1362,82 +1652,66 @@ function updateCart(){
         document.getElementById("cartTotal");
 
 
-    count.textContent = cart.length;
+    count.textContent =
+        cart.length;
 
 
     if(cart.length === 0){
 
-        items.innerHTML =
-            '<p style="color:#777;font-size:13px;">Votre panier est vide.</p>';
+        items.innerHTML = `
+            <p style="color:#777;font-size:13px;">
+                Votre panier est vide.
+            </p>
+        `;
 
-        total.textContent = "0 FCFA";
+        total.textContent =
+            "0 FCFA";
 
         return;
 
     }
 
 
-    items.innerHTML = cart.map((item,index)=>`
+    items.innerHTML =
+        cart.map(function(item,index){
 
-        <div class="cart-item">
+            return `
 
-            <div>
+                <div class="cart-item">
 
-                <strong>${item.name}</strong>
+                    <div>
 
-                <br>
+                        <strong>
+                            ${item.name}
+                        </strong>
 
-                <small>Prix sur demande</small>
+                        <br>
 
-            </div>
+                        <small>
+                            Prix sur demande
+                        </small>
 
-            <button
-                onclick="removeItem(${index})"
-                style="
-                background:none;
-                border:0;
-                color:#999;
-                cursor:pointer;
-                ">
-                ×
-            </button>
+                    </div>
 
-        </div>
+                    <button
+                        class="remove"
+                        onclick="removeItem(${index})">
 
-    `).join("");
+                        ×
+
+                    </button>
+
+                </div>
+
+            `;
+
+        }).join("");
 
 
     total.textContent =
         "Sur demande";
 
 }
-
-
-/* SUPPRIMER */
-
-function removeItem(index){
-
-    cart.splice(index,1);
-
-    updateCart();
-
-}
-
-
-/* FERMER MENU APRÈS CLIC */
-
-document.querySelectorAll("nav a").forEach(link=>{
-
-    link.addEventListener("click",()=>{
-
-        document
-            .getElementById("nav")
-            .classList
-            .remove("active");
-
-    });
-
-});
 
 </script>
 
